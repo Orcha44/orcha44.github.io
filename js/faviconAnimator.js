@@ -1,4 +1,4 @@
-(function ()
+function initFaviconAnimator()
 {
     var favicon = document.getElementById("favicon");
     var onHref = "assets/favicon-on.png";
@@ -51,4 +51,4 @@
 
     window.addEventListener("blur", startBlink);
     window.addEventListener("focus", setOn);
-})();
+}
