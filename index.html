@@ -7,52 +7,235 @@
 <title>Or Chaimi | Unity Developer</title>
 
 <link rel="icon" type="image/png" href="assets/favicon-on.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <script src="js/faviconAnimator.js"></script>
+<script src="js/main.js"></script>
 <body>
 
-<header class="header">
-    <h1>Or Chaimi</h1>
-    <p class="subtitle">Unity Developer</p>
+<header class="site-header">
+    <div class="container header-inner">
+        <div>
+            <h1 class="title">Or Chaimi</h1>
+            <p class="subtitle">Unity Developer • Gameplay • Architecture • Performance</p>
+            <div class="cta-row">
+                <a class="btn" href="#solo">Solo Games</a>
+                <a class="btn btn-ghost" href="#lead">Lead Developer Games</a>
+                <a class="btn btn-ghost" href="#about">About</a>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="chip" href="https://github.com/orcha44" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="chip" href="mailto:your@email.com">Email</a>
+        </div>
+    </div>
 </header>
 
-<section class="about">
-    <p>
-        Gameplay systems, architecture, performance optimization and cross-platform development.
-    </p>
+<main>
+
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-head">
+            <h2>About</h2>
+            <p class="muted">Short and direct. Focus on outcomes and scope.</p>
+        </div>
+
+        <div class="about-card">
+            <div class="about-text">
+                <p>
+                    Unity developer with a focus on building robust gameplay systems, clean architecture,
+                    and performance-aware production code. Experienced in shipping cross-platform titles
+                    and owning features end-to-end—from prototypes to live content.
+                </p>
+
+                <div class="tag-row">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Mobile</span>
+                    <span class="tag">Tools</span>
+                    <span class="tag">Optimization</span>
+                    <span class="tag">Live Ops</span>
+                </div>
+            </div>
+
+            <div class="about-metrics">
+                <div class="metric">
+                    <div class="metric-num">10+</div>
+                    <div class="metric-label">Years dev</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-num">X</div>
+                    <div class="metric-label">Shipped titles</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-num">Unity</div>
+                    <div class="metric-label">Specialty</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="portfolio">
+<section id="solo" class="section">
+    <div class="container">
+        <div class="section-head">
+            <h2>Solo Games</h2>
+            <p class="muted">Projects built independently: prototyping, design, implementation, polish.</p>
+        </div>
 
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-        title="Project Video"
-        frameborder="0"
-        allowfullscreen></iframe>
+        <div class="grid">
 
-        <h3>Project Name</h3>
-        <p>Short description of the project.</p>
+            <article class="card">
+                <div class="media">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="Solo Project Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="card-body">
+                    <h3>Dragons Tower</h3>
+                    <p class="muted">Short 1–2 sentence summary. What is it + what you owned + outcome.</p>
+
+                    <div class="tag-row">
+                        <span class="tag">Prototype</span>
+                        <span class="tag">Gameplay</span>
+                        <span class="tag">UI</span>
+                    </div>
+
+                    <div class="links">
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Trailer</a>
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Build</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="media">
+                    <iframe
+                        src="https://player.vimeo.com/video/VIDEO_ID"
+                        title="Solo Project Video"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="card-body">
+                    <h3>Snowboard Avalanche</h3>
+                    <p class="muted">Short 1–2 sentence summary. Mention tech highlights.</p>
+
+                    <div class="tag-row">
+                        <span class="tag">Hyper-casual</span>
+                        <span class="tag">Physics</span>
+                        <span class="tag">Mobile</span>
+                    </div>
+
+                    <div class="links">
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Trailer</a>
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
     </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-        title="Project Video"
-        frameborder="0"
-        allowfullscreen></iframe>
-
-        <h3>Another Project</h3>
-        <p>Short description of the project.</p>
-    </div>
-
 </section>
 
-<footer>
-    <p>© 2026 Or Chaimi</p>
+<section id="lead" class="section">
+    <div class="container">
+        <div class="section-head">
+            <h2>Lead Developer Games</h2>
+            <p class="muted">Professional work: leadership scope, architecture decisions, shipped impact.</p>
+        </div>
+
+        <div class="grid">
+
+            <article class="card">
+                <div class="media">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="Studio Project Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="card-body">
+                    <div class="title-row">
+                        <h3>Project / Game Name</h3>
+                        <span class="badge">Lead</span>
+                    </div>
+
+                    <p class="muted">
+                        Highlight your role: team size, ownership area, systems shipped, performance wins, etc.
+                    </p>
+
+                    <div class="tag-row">
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Live Ops</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+
+                    <div class="links">
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Store</a>
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Trailer</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="media">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="Studio Project Video"
+                        frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="card-body">
+                    <div class="title-row">
+                        <h3>Another Title</h3>
+                        <span class="badge">Core Dev</span>
+                    </div>
+
+                    <p class="muted">Mention the highest-signal contributions and measurable outcomes.</p>
+
+                    <div class="tag-row">
+                        <span class="tag">Gameplay</span>
+                        <span class="tag">Tools</span>
+                        <span class="tag">Pipeline</span>
+                    </div>
+
+                    <div class="links">
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Store</a>
+                        <a class="link" href="#" target="_blank" rel="noreferrer">Press</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="muted">© 2026 Or Chaimi</div>
+        <div class="muted">Built with GitHub Pages</div>
+    </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 
 </html>
