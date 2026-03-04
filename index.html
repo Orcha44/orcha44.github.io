@@ -1,38 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Or Chaimi - Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{
-    font-family: Arial;
-    text-align:center;
-    background:#111;
-    color:white;
-}
-.video{
-    margin:40px auto;
-}
-iframe{
-    width:800px;
-    height:450px;
-    max-width:90%;
-}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Or Chaimi | Unity Developer</title>
+
+<link rel="icon" type="image/png" href="assets/favicon-on.png">
+<link rel="stylesheet" href="styles.css">
+
 </head>
 
+<script src="js/faviconAnimator.js"></script>
 <body>
 
-<h1>Or Chaimi</h1>
-<h3>Unity Developer Portfolio</h3>
+<header class="header">
+    <h1>Or Chaimi</h1>
+    <p class="subtitle">Unity Developer</p>
+</header>
 
-<div class="video">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
-</div>
+<section class="about">
+    <p>
+        Gameplay systems, architecture, performance optimization and cross-platform development.
+    </p>
+</section>
 
-<div class="video">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
-</div>
+<section class="portfolio">
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+        title="Project Video"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+        <h3>Project Name</h3>
+        <p>Short description of the project.</p>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+        title="Project Video"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+        <h3>Another Project</h3>
+        <p>Short description of the project.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Or Chaimi</p>
+</footer>
 
 </body>
+
 </html>
