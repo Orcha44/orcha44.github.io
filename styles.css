@@ -8,6 +8,8 @@
     --border:rgba(255,255,255,0.08);
     --shadow:0 10px 30px rgba(0,0,0,0.35);
     --radius:16px;
+    --accent:#6ea8ff;
+    --accent-strong:#3d7fff;
 }
 
 *
@@ -41,6 +43,8 @@ a
     color:var(--muted);
 }
 
+/* ---------- Header / hero ---------- */
+
 .site-header
 {
     position:sticky;
@@ -71,13 +75,24 @@ a
 {
     margin:10px 0 0 0;
     font-size:15px;
+    color:var(--muted);
+}
+
+.hero-pitch
+{
+    margin:10px 0 0 0;
+    font-size:15px;
+    line-height:1.6;
+    max-width:560px;
+    color:var(--text);
+    opacity:0.95;
 }
 
 .cta-row
 {
     display:flex;
     gap:10px;
-    margin-top:16px;
+    margin-top:18px;
     flex-wrap:wrap;
 }
 
@@ -86,11 +101,14 @@ a
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:10px 14px;
+    padding:10px 16px;
     border-radius:999px;
     background:rgba(255,255,255,0.12);
     border:1px solid var(--border);
-    transition:transform 120ms ease, background 120ms ease;
+    transition:transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
 }
 
 .btn:hover
@@ -102,6 +120,20 @@ a
 .btn-ghost
 {
     background:transparent;
+}
+
+.btn-primary
+{
+    background:linear-gradient(180deg, var(--accent), var(--accent-strong));
+    border-color:rgba(110,168,255,0.35);
+    color:#0b0c10;
+    font-weight:700;
+}
+
+.btn-primary:hover
+{
+    background:linear-gradient(180deg, #84b6ff, #5790ff);
+    border-color:rgba(110,168,255,0.55);
 }
 
 .quick-links
@@ -118,11 +150,76 @@ a
     border-radius:999px;
     background:rgba(255,255,255,0.06);
     border:1px solid var(--border);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    transition:transform 120ms ease, background 120ms ease;
 }
+
+.chip:hover
+{
+    background:rgba(255,255,255,0.12);
+    transform:translateY(-1px);
+}
+
+.chip-icon
+{
+    width:16px;
+    height:16px;
+    opacity:0.9;
+}
+
+/* ---------- Stats band (under hero) ---------- */
+
+.stats-band
+{
+    border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(110,168,255,0.06), rgba(110,168,255,0.00));
+}
+
+.stats-band-inner
+{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:24px;
+    padding:36px 20px;
+}
+
+.stats-band-inner .metric
+{
+    background:transparent;
+    border:0;
+    padding:0;
+    text-align:center;
+}
+
+.stats-band-inner .metric-num
+{
+    font-size:48px;
+    font-weight:800;
+    letter-spacing:-0.03em;
+    line-height:1;
+    background:linear-gradient(180deg, #ffffff, #b9c4dc);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.stats-band-inner .metric-label
+{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:14px;
+    font-weight:500;
+}
+
+/* ---------- Sections ---------- */
 
 .section
 {
     padding:70px 0;
+    scroll-margin-top:140px;
 }
 
 .section-head
@@ -132,6 +229,7 @@ a
     justify-content:space-between;
     gap:16px;
     margin-bottom:18px;
+    flex-wrap:wrap;
 }
 
 .section-head h2
@@ -157,15 +255,14 @@ a
     background:linear-gradient(90deg, rgba(255,255,255,0.00), rgba(255,255,255,0.18), rgba(255,255,255,0.00));
 }
 
+/* ---------- About ---------- */
+
 .about-card
 {
-    display:grid;
-    grid-template-columns: 1.4fr 0.6fr;
-    gap:18px;
     background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
     border:1px solid var(--border);
     border-radius:var(--radius);
-    padding:20px;
+    padding:24px;
     box-shadow:var(--shadow);
 }
 
@@ -175,6 +272,17 @@ a
     line-height:1.7;
 }
 
+.about-subhead
+{
+    margin:18px 0 12px 0;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--muted);
+    font-weight:700;
+}
+
+/* Old metric grid kept for backwards compatibility (no longer used by the new HTML) */
 .about-metrics
 {
     display:grid;
@@ -203,6 +311,8 @@ a
     font-size:13px;
 }
 
+/* ---------- Project grid ---------- */
+
 .grid
 {
     display:grid;
@@ -219,6 +329,13 @@ a
     overflow:hidden;
     box-shadow:var(--shadow);
     transform:translateZ(0);
+    transition:transform 160ms ease, border-color 160ms ease;
+}
+
+.card:hover
+{
+    transform:translateY(-2px);
+    border-color:rgba(255,255,255,0.16);
 }
 
 .media
@@ -254,6 +371,7 @@ a
     align-items:center;
     justify-content:space-between;
     gap:12px;
+    margin-bottom:8px;
 }
 
 .badge
@@ -307,6 +425,44 @@ a
     border-bottom-color:rgba(255,255,255,0.55);
 }
 
+/* ---------- Contact section ---------- */
+
+.contact-section
+{
+    border-top:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(110,168,255,0.04), rgba(110,168,255,0.00));
+}
+
+.contact-inner
+{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto;
+    padding:20px;
+}
+
+.contact-inner h2
+{
+    margin:0 0 12px 0;
+    font-size:30px;
+    font-weight:800;
+    letter-spacing:-0.02em;
+}
+
+.contact-inner .muted
+{
+    margin:0 0 22px 0;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.contact-inner .cta-row
+{
+    justify-content:center;
+}
+
+/* ---------- Footer ---------- */
+
 .footer
 {
     border-top:1px solid var(--border);
@@ -322,49 +478,7 @@ a
     gap:12px;
 }
 
-@media (max-width: 900px)
-{
-    .grid
-    {
-        grid-template-columns:1fr;
-    }
-
-    .about-card
-    {
-        grid-template-columns:1fr;
-    }
-
-    .header-inner
-    {
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .quick-links
-    {
-        justify-content:flex-start;
-    }
-}
-
-.chip
-{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-}
-
-.chip-icon
-{
-    width:16px;
-    height:16px;
-    opacity:0.9;
-}
-
-.chip:hover
-{
-    background:rgba(255,255,255,0.12);
-    transform:translateY(-1px);
-}
+/* ---------- Active nav button ---------- */
 
 .btn.is-active
 {
@@ -377,7 +491,50 @@ a
     background:rgba(255,255,255,0.12);
 }
 
-.section
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px)
 {
-    scroll-margin-top: 140px;
+    .grid
+    {
+        grid-template-columns:1fr;
+    }
+
+    .about-card
+    {
+        padding:18px;
+    }
+
+    .header-inner
+    {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .quick-links
+    {
+        justify-content:flex-start;
+    }
+
+    .stats-band-inner
+    {
+        grid-template-columns:1fr;
+        gap:18px;
+        padding:28px 20px;
+    }
+
+    .stats-band-inner .metric-num
+    {
+        font-size:38px;
+    }
+
+    .title
+    {
+        font-size:30px;
+    }
+
+    .contact-inner h2
+    {
+        font-size:24px;
+    }
 }
